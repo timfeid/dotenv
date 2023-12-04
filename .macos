@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# slightly modified from https://github.com/paulirish/dotfiles/blob/main/.macos
+
 # ~/.macos
 # paul's slight fork of https://mths.be/macos
 #                       ^ is more canonical and comprehensive. I've edited it down a bit for my own uses.

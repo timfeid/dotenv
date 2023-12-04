@@ -1,14 +1,14 @@
 #!/bin/bash
+# make sure you run from this folder e.g ./new-machine.sh
 
 ZSH="$PWD/.oh-my-zsh"
-mkdir -p "$ZSH"
 
 # -- oh my zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
-ln -s ~/dotfiles/.zshrc ~/.zshrc
-
-cp -R "$PWD/plugins" "$PWD/.oh-my-zsh/custom"
+git clone https://github.com/zsh-users/zsh-autosuggestions "$ZSH/custom/plugins/zsh-autosuggestions"
+git clone https://github.com/zsh-users/zsh-syntax-highlighting "$ZSH/custom/plugins/zsh-syntax-highlighting"
+rm -rf ~/.zshrc
+ln -s "$PWD/.zshrc" ~/.zshrc
 
 # -- cervesa
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
