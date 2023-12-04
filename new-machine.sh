@@ -36,3 +36,9 @@ sudo hdiutil detach /Volumes/Docker
 # -- aws
 curl "https://awscli.amazonaws.com/AWSCLIV2.pkg" -o "AWSCLIV2.pkg"
 sudo installer -pkg AWSCLIV2.pkg -target /
+
+# -- git stuff
+# git set-upstream for when you get that "There is no tracking information for the current branch." error
+git config --global alias.set-upstream '!git branch --set-upstream-to=origin/$(git symbolic-ref --short HEAD)'
+# git ac "message" -> git add all files and commit
+git config --global alias.ac '!git add -A && git commit -m'
